@@ -1,6 +1,5 @@
 ﻿using MB_Domain.ArticleCategoryAgg.Services;
 using System;
-using System.ComponentModel.DataAnnotations;
 
 namespace MB_Domain.ArticleCategoryAgg
 {
@@ -11,13 +10,17 @@ namespace MB_Domain.ArticleCategoryAgg
         public DateTime CreatedOn { get; private set; }
         public bool IsDeleted { get; private set; }
 
-        public ArticleCategory(string title, IArticleCategoryValidatorService validatorService)
+        public ArticleCategory(string title,IArticleCategoryValidatorService validatorService)
         {
-            Validation(title);
             validatorService.CheckExist(title);
+            Validation(title);
             Title = title;
             IsDeleted = false;
             CreatedOn = DateTime.Now;
+        }
+        private ArticleCategory()
+        {
+            
         }
         public void Edit(string title)
         {

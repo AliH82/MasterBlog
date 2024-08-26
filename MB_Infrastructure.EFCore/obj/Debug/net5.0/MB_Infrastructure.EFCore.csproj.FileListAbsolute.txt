@@ -16,3 +16,4 @@ G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.EFCore
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.EFCore\obj\Debug\net5.0\MB_Infrastructure.EFCore.pdb
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.EFCore\obj\Debug\net5.0\MB_Infrastructure.EFCore.genruntimeconfig.cache
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.EFCore\obj\Debug\net5.0\ref\MB_Infrastructure.EFCore.dll
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.EFCore\obj\Debug\net5.0\MB_Infrastructure.EFCore.sourcelink.json

@@ -1,6 +1,7 @@
 ﻿using MB_Application.ArticleCategoryAgg;
 using MB_Application.Contracts.ArticleCategory;
 using MB_Domain.ArticleCategoryAgg;
+using MB_Domain.ArticleCategoryAgg.Services;
 using MB_Infrastructure.EFCore.Context;
 using MB_Infrastructure.EFCore.Repository;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,7 @@ namespace MB_Infrastructure.Core
         {
             services.AddTransient<IArticleCategoryApplication, ArticleCategoryApplication>();
             services.AddTransient<IArticleCategoryRepository, ArticleCategoryRepository>();
+            services.AddTransient<IArticleCategoryValidatorService, ArticleCategoryValidatorService>();
 
             services.AddDbContext<MBContext>(x => x.UseSqlServer(connectionString));
         }

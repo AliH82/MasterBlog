@@ -1,5 +1,4 @@
 ﻿using MB_Domain.ArticleCategoryAgg.Exeptions;
-using System;
 
 namespace MB_Domain.ArticleCategoryAgg.Services
 {
@@ -14,7 +13,7 @@ namespace MB_Domain.ArticleCategoryAgg.Services
 
         public void CheckExist(string title)
         {
-            if (_articleCategoryRepository.CheckExist(title))
+            if (_articleCategoryRepository.Exist(title))
             {
                 throw new DuplicatedRecordExeption("this record is ready exist in database");
             }

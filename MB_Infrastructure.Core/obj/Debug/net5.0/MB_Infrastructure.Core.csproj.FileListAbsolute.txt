@@ -19,3 +19,4 @@ G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.Core\o
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.Core\obj\Debug\net5.0\refint\MB_Infrastructure.Core.dll
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.Core\obj\Debug\net5.0\MB_Infrastructure.Core.pdb
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.Core\obj\Debug\net5.0\ref\MB_Infrastructure.Core.dll
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Infrastructure.Core\obj\Debug\net5.0\MB_Infrastructure.Core.sourcelink.json

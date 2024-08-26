@@ -15,3 +15,4 @@ G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application\obj\Debug
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application\obj\Debug\net5.0\ref\MB_Application.dll
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application\bin\Debug\net5.0\MB_Domain.dll
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application\bin\Debug\net5.0\MB_Domain.pdb
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application\obj\Debug\net5.0\MB_Application.sourcelink.json

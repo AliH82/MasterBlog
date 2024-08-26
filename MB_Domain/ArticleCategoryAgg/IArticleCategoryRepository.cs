@@ -12,7 +12,7 @@ namespace MB_Domain.ArticleCategoryAgg
         void Create(ArticleCategory entity);
         ArticleCategory Get(int id);
         void Edit(ArticleCategory entity);
-        bool CheckExist(string title); 
+        bool Exist(string title); 
         void Save();
     }
 }
