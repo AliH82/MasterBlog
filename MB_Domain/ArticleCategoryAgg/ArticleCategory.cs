@@ -22,9 +22,9 @@ namespace MB_Domain.ArticleCategoryAgg
             CreatedOn = DateTime.Now;
             Articles = new List<Article>();
         }
-        private ArticleCategory()
+        protected ArticleCategory()
         {
-            
+
         }
         public void Edit(string title)
         {

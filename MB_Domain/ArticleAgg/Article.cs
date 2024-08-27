@@ -15,9 +15,9 @@ namespace MB_Domain.ArticleAgg
         public int ArticleCategoryId { get; private set; }
         public ArticleCategory ArticleCategory { get; private set; }
 
-        private Article()
+        protected Article()
         {
-            
+
         }
 
         public Article(string title, string shortDescription, string image, string content, int articleCategoryId)

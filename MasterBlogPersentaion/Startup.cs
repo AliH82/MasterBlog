@@ -35,7 +35,7 @@ namespace MasterBlogPersentaion
             //services.AddTransient<IArticleCategoryRepository, ArticleCategoryRepository>();
             //services.AddDbContext<MBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
             var connectionString = Configuration.GetConnectionString("ConnectionString");
-            Bootstrapper.Config(services,connectionString);
+            Bootstrapper.Config(services, connectionString);
             services.AddRazorPages();
         }
 

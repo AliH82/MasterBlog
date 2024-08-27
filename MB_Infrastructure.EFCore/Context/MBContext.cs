@@ -2,12 +2,6 @@
 using MB_Domain.ArticleCategoryAgg;
 using MB_Infrastructure.EFCore.Mapping;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MB_Infrastructure.EFCore.Context
 {
