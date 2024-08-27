@@ -9,3 +9,4 @@ G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application.Contracts
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application.Contracts\obj\Debug\net5.0\refint\MB_Application.Contracts.dll
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application.Contracts\obj\Debug\net5.0\MB_Application.Contracts.pdb
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application.Contracts\obj\Debug\net5.0\ref\MB_Application.Contracts.dll
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MB_Application.Contracts\obj\Debug\net5.0\MB_Application.Contracts.sourcelink.json

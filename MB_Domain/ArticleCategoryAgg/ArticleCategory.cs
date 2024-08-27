@@ -1,5 +1,7 @@
-﻿using MB_Domain.ArticleCategoryAgg.Services;
+﻿using MB_Domain.ArticleAgg;
+using MB_Domain.ArticleCategoryAgg.Services;
 using System;
+using System.Collections.Generic;
 
 namespace MB_Domain.ArticleCategoryAgg
 {
@@ -9,6 +11,7 @@ namespace MB_Domain.ArticleCategoryAgg
         public string Title { get; private set; }
         public DateTime CreatedOn { get; private set; }
         public bool IsDeleted { get; private set; }
+        public List<Article> Articles { get; private set; }
 
         public ArticleCategory(string title,IArticleCategoryValidatorService validatorService)
         {
@@ -17,6 +20,7 @@ namespace MB_Domain.ArticleCategoryAgg
             Title = title;
             IsDeleted = false;
             CreatedOn = DateTime.Now;
+            Articles = new List<Article>();
         }
         private ArticleCategory()
         {

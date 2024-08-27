@@ -18,6 +18,8 @@ namespace MB_Infrastructure.EFCore.Mapping
             builder.Property(x => x.Title).HasMaxLength(255).IsRequired();
             builder.Property(x => x.CreatedOn).IsRequired();
             builder.Property(x => x.IsDeleted);
+
+            builder.HasMany(x => x.Articles).WithOne(x => x.ArticleCategory).HasForeignKey(x => x.ArticleCategoryId);
         }
     }
 }
