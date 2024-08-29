@@ -13,19 +13,14 @@ namespace MB_Domain.ArticleCategoryAgg
         public bool IsDeleted { get; private set; }
         public List<Article> Articles { get; private set; }
 
-        public ArticleCategory(string title,IArticleCategoryValidatorService validatorService)
+        public ArticleCategory(string title)
         {
-            validatorService.CheckExist(title);
-            Validation(title);
             Title = title;
             IsDeleted = false;
             CreatedOn = DateTime.Now;
             Articles = new List<Article>();
         }
-        protected ArticleCategory()
-        {
 
-        }
         public void Edit(string title)
         {
             Validation(title);
@@ -42,7 +37,8 @@ namespace MB_Domain.ArticleCategoryAgg
             IsDeleted = false;
         }
 
-        public void Validation(string title) {
+        public void Validation(string title)
+        {
             if (string.IsNullOrWhiteSpace(title))
                 throw new ArgumentNullException();
         }

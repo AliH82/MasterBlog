@@ -1,6 +1,7 @@
 ﻿using MB_Domain.ArticleAgg;
 using MB_Domain.ArticleCategoryAgg;
 using MB_Infrastructure.EFCore.Context;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace MB_Infrastructure.EFCore.Repository
 {
     public class ArticleRepository : IArticleRepository
     {
-        private readonly MBContext _context;
+        private readonly MasterBlogContext _context;
 
-        public ArticleRepository(MBContext context)
+        public ArticleRepository(MasterBlogContext context)
         {
             _context = context;
         }

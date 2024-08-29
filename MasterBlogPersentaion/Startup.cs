@@ -1,6 +1,7 @@
 using MB_Application.ArticleCategoryAgg;
 using MB_Application.Contracts.ArticleCategory;
 using MB_Domain.ArticleCategoryAgg;
+using MB_Domain.ArticleCategoryAgg.Services;
 using MB_Infrastructure.Core;
 using MB_Infrastructure.EFCore.Context;
 using MB_Infrastructure.EFCore.Repository;
@@ -31,11 +32,7 @@ namespace MasterBlogPersentaion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddTransient<IArticleCategoryApplication, ArticleCategoryApplication>();
-            //services.AddTransient<IArticleCategoryRepository, ArticleCategoryRepository>();
-            //services.AddDbContext<MBContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ConnectionString")));
-            var connectionString = Configuration.GetConnectionString("ConnectionString");
-            Bootstrapper.Config(services, connectionString);
+            Bootstrapper.Config(services, Configuration.GetConnectionString("ConnectionString"));
             services.AddRazorPages();
         }
 

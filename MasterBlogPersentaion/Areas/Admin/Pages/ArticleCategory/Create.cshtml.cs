@@ -8,6 +8,7 @@ namespace MasterBlogPersentaion.Areas.Admin.Pages.ArticleCategory
     public class CreateModel : PageModel
     {
         public ArticleCategoryViewModel model {get; set;}
+
         private readonly IArticleCategoryApplication _articleCategoryApplication;
 
         public CreateModel(IArticleCategoryApplication articleCategoryApplication)

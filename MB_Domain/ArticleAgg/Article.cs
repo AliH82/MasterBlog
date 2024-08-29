@@ -17,7 +17,6 @@ namespace MB_Domain.ArticleAgg
 
         protected Article()
         {
-
         }
 
         public Article(string title, string shortDescription, string image, string content, int articleCategoryId)

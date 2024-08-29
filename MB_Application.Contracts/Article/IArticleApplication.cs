@@ -8,6 +8,7 @@ namespace MB_Application.Contracts.Article
 {
     public interface IArticleApplication
     {
-
+        List<ArticleViewModel> GetAll();
+        void Create(ArticleViewModel model);
     }
 }

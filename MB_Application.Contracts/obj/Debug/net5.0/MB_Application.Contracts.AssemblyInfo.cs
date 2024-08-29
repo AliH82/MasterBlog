@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MB_Application.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+003f78ee88ea63f79ef891c0835e77d7a3dfcd06")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+198e3fd8b53098822139c03bc31b6b2b03fe3134")]
 [assembly: System.Reflection.AssemblyProductAttribute("MB_Application.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MB_Application.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

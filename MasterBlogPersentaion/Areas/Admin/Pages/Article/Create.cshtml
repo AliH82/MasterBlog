@@ -1,0 +1,58 @@
+﻿@page
+@model MasterBlogPersentaion.Areas.Admin.Pages.Article.CreateModel
+@{
+}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Create New Article</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <div class="form-group">
+                                <label class="control-label">Title:</label>
+                                <input class="form-control" name="Title" asp-for="@Model.model.Title" />
+                                <span class="text-danger" asp-validation-for="@Model.model.Title"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Catergory:</label>
+                                <select class="form-control" name="ArticleCategoryId" asp-for="@Model.model.ArticleCategoryId" asp-items="@Model.ArticleCategoryList">
+                                    @* <option value="null">Category</option> *@
+                                </select>
+                                <span class="text-danger" asp-validation-for="@Model.model.ArticleCategoryId"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Image:</label>
+                                <input class="form-control" name="Image" asp-for="@Model.model.Image" />
+                                <span class="text-danger" asp-validation-for="@Model.model.Image"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label">ShortDescription:</label>
+                                <textarea class="form-control" style="min-height: 200px" name="ShortDescription" asp-for="@Model.model.ShortDescription"></textarea>
+                                <span class="text-danger" asp-validation-for="@Model.model.ShortDescription"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            
+                            <div class="form-group">
+                                <label class="control-label">Content:</label>
+                                <textarea class="form-control" style="min-height: 200px" name="Content" asp-for="@Model.model.Content"></textarea>
+                                <span class="text-danger" asp-validation-for="@Model.model.Content"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Create" class="btn btn-success" />
+                            <a class="btn btn-dark" asp-page="./Index" asp-area="Admin">Back to list</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

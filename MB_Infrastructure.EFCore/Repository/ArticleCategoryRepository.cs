@@ -10,9 +10,9 @@ namespace MB_Infrastructure.EFCore.Repository
 {
     public class ArticleCategoryRepository : IArticleCategoryRepository
     {
-        private readonly MBContext _context;
+        private readonly MasterBlogContext _context;
 
-        public ArticleCategoryRepository(MBContext context)
+        public ArticleCategoryRepository(MasterBlogContext context)
         {
             _context = context;
         }

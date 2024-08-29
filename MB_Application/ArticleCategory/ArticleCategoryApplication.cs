@@ -20,7 +20,7 @@ namespace MB_Application.ArticleCategoryAgg
 
         public void Create(ArticleCategoryViewModel model)
         {
-            ArticleCategory articleCategory = new ArticleCategory(model.Title,_articleCategoryValidatorService);
+            ArticleCategory articleCategory = new ArticleCategory(model.Title);
             _articleCategoryRepository.Create(articleCategory);
         }
 
