@@ -19,5 +19,16 @@ namespace MasterBlogPersentaion.Areas.Admin.Pages.Article
         {
             ArticleList = _articleApplication.GetAll();
         }
+
+        public IActionResult OnGetRemove(int id)
+        {
+            _articleApplication.Remove(id);
+            return RedirectToPage("Index");
+        }
+        public IActionResult OnGetRestore(int id)
+        {
+            _articleApplication.Restore(id);
+            return RedirectToPage("Index");
+        }
     }
 }

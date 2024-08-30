@@ -7,6 +7,7 @@ namespace MB_Domain.ArticleAgg
         List<Article> GetAll();
         Article Get(int id);
         void Create(Article article);
+        void Edit(Article article);
         void Save();
     }
 }

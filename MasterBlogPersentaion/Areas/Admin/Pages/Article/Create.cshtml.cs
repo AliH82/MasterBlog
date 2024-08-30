@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace MasterBlogPersentaion.Areas.Admin.Pages.Article
 {
@@ -22,16 +23,17 @@ namespace MasterBlogPersentaion.Areas.Admin.Pages.Article
 
         public void OnGet()
         {
-            ArticleCategoryList = new SelectList(_articleCategoryApplication.GetAll(),"Id","Title");
+            ArticleCategoryList = new SelectList(_articleCategoryApplication.GetAll(), "Id", "Title");
         }
 
-        public RedirectToPageResult OnPost(ArticleViewModel article)
+        public IActionResult OnPost(ArticleViewModel article)
         {
             if (ModelState.IsValid)
             {
                 _articleApplication.Create(article);
+                return RedirectToPage("./Index");
             }
-            return RedirectToPage("./Index");
+            return Page();
         }
     }
 }

@@ -35,6 +35,13 @@ namespace MB_Infrastructure.EFCore.Repository
             return _context.Article.FirstOrDefault(x => x.Id == id);
         }
 
+        public void Edit(Article article)
+        {
+            var entity = Get(article.Id);
+            entity.Edit(article.Title,article.ShortDescription,article.Image,article.Content,article.ArticleCategoryId);
+            Save();
+        }
+
         public void Save()
         {
             _context.SaveChanges();

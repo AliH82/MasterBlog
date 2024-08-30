@@ -11,7 +11,7 @@ namespace MB_Application.ArticleApp
     {
         private readonly IArticleRepository _articleRepository;
         private readonly IArticleCategoryRepository _articleCategoryRepository;
-        
+
 
         public ArticleApplication(IArticleRepository articleRepository, IArticleCategoryRepository articleCategoryRepository)
         {
@@ -23,12 +23,34 @@ namespace MB_Application.ArticleApp
         {
             Article article = new Article(model.Title, model.ShortDescription, model.Image, model.Content, model.ArticleCategoryId);
             _articleRepository.Create(article);
+        }
+
+        public void Edit(ArticleViewModel model)
+        {
+            Article article = _articleRepository.Get(model.Id);
+            article.Edit(model.Title, model.ShortDescription, model.Image, model.Content, model.ArticleCategoryId);
             _articleRepository.Save();
+        }
+
+        public ArticleViewModel Get(int id)
+        {
+            var article = _articleRepository.Get(id);
+            var articleViewModel = new ArticleViewModel()
+            {
+                Id = article.Id,
+                Title = article.Title,
+                Content = article.Content,
+                ShortDescription = article.ShortDescription,
+                Image = article.Image,
+                CreatedOn = article.CreatedOn.ToString(),
+                IsDeleted = article.IsDeleted,
+                ArticleCategoryId = article.ArticleCategoryId
+            };
+            return articleViewModel;
         }
 
         public List<ArticleViewModel> GetAll()
         {
-            //_articleCategoryRepository.Get(a.ArticleCategoryId).Title
             return _articleRepository.GetAll().Select(a => new ArticleViewModel
             {
                 Id = a.Id,
@@ -41,6 +63,20 @@ namespace MB_Application.ArticleApp
                 ArticleCategoryId = a.ArticleCategoryId,
                 ArticleCategory = _articleCategoryRepository.Get(a.ArticleCategoryId).Title
             }).OrderByDescending(a => a.Id).ToList();
+        }
+
+        public void Restore(int id)
+        {
+            var article = _articleRepository.Get(id);
+            article.Restore();
+            _articleRepository.Save();
+        }
+
+        public void Remove(int id)
+        {
+            var article = _articleRepository.Get(id);
+            article.Remove();
+            _articleRepository.Save();
         }
     }
 }

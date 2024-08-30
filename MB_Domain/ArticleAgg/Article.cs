@@ -29,5 +29,24 @@ namespace MB_Domain.ArticleAgg
             CreatedOn = DateTime.Now;
             IsDeleted = false;
         }
+
+        public void Edit(string title, string shortDescription, string image, string content, int articleCategoryId)
+        {
+            Title = title;
+            ShortDescription = shortDescription;
+            Image = image;
+            Content = content;
+            ArticleCategoryId = articleCategoryId;
+        }
+
+        public void Remove()
+        {
+            IsDeleted = true;
+        }
+
+        public void Restore()
+        {
+            IsDeleted = false;
+        }
     }
 }
