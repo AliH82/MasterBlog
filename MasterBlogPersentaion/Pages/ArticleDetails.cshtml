@@ -1,4 +1,4 @@
-﻿@page
+﻿@page "{id:int}"
 @model MasterBlogPersentaion.Pages.ArticleDetailsModel
 @{
 }
@@ -37,34 +37,42 @@
                 </div>
 
 
+
                 <div class="post-comments">
                     <header>
-                        <h3 class="h6">Post Comments<span class="no-of-comments">1</span></h3>
+                        <h3 class="h6">Post Comments<span class="no-of-comments">@Model.CommenstList.Count()</span></h3>
                     </header>
 
-                    <div class="comment">
-                        <div class="comment-header d-flex justify-content-between">
-                            <div class="user d-flex align-items-center">
-                                <div class="image">
-                                    <img src="~/img/user.svg" alt="..." class="img-fluid rounded-circle">
+                    @if (Model.CommenstList.Any())
+                    {
+                        foreach (var comment in Model.CommenstList)
+                        {
+                            <div class="comment">
+                                <div class="comment-header d-flex justify-content-between">
+                                    <div class="user d-flex align-items-center">
+                                        <div class="image">
+                                            <img src="~/img/user.svg" alt="..." class="img-fluid rounded-circle">
+                                        </div>
+                                        <div class="title">
+                                            <strong>@comment.Name</strong><span class="date">@comment.CreatedOn</span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="title">
-                                    <strong>Ali</strong><span class="date">5/3/1403</span>
+                                <div class="comment-body">
+                                    <p>@comment.Message</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="comment-body">
-                            <p>Message</p>
-                        </div>
-                    </div>
+                        }
+                    }
 
                 </div>
 
-                @* <div class="add-comment">
+                <div class="add-comment">
                     <header>
                         <h3 class="h6">Leave a reply</h3>
                     </header>
                     <form class="commenting-form" method="post">
+                        <input type="hidden" name="ArticleId" value="@Model.model.Id" />
                         <div class="row">
                             <div class="form-group col-md-6">
                                 <input type="text" name="Name" id="Name" placeholder="Name" class="form-control">
@@ -75,13 +83,12 @@
                             <div class="form-group col-md-12">
                                 <textarea name="Message" id="Message" placeholder="Type your comment" class="form-control"></textarea>
                             </div>
-                            <input type="hidden" name="ArticleId" value="@Model.Article.Id" />
                             <div class="form-group col-md-12">
                                 <button type="submit" class="btn btn-secondary">Submit Comment</button>
                             </div>
                         </div>
                     </form>
-                </div> *@
+                </div>
             </div>
         </div>
     </div>

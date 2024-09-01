@@ -1,0 +1,59 @@
+﻿@page
+@using MasterBlogPersentaion.Eums
+@model MasterBlogPersentaion.Areas.Admin.Pages.Comment.IndexModel
+@{
+}
+
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="float-left">Comment List</h3>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Article</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Statuse</th>
+                    <th>CreatedOn</th>
+                    <th>Operations</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var comment in Model.CommentList)
+                {
+                    <tr>
+                        <td>@comment.Id</td>
+                        <td>@comment.Article</td>
+                        <td>@comment.Name</td>
+                        <td>@comment.Email</td>
+                        <td class="text-center">
+                            @if (comment.Statuse == StatuseComment.New)
+                            {
+                                <i class="fa fa-spinner text-warning" style="font-size: 16px"></i>
+                            }
+                            @if (comment.Statuse == StatuseComment.Confirm)
+                            {
+                                <i class="fa fa-check text-success"></i>
+                            }
+                            @if (comment.Statuse == StatuseComment.Cancell)
+                            {
+                                <i class="fa fa-close text-danger"></i>
+                            }
+                        </td>
+                        <td>@comment.CreatedOn</td>
+                        <td>
+                            <a class="btn btn-primary text-white pointer-event" asp-area="Admin" asp-page="./Detail" asp-route-id="@comment.Id">show All</a>
+                            <a class="btn btn-danger text-white pointer-event" asp-area="Admin" asp-page-handler="Cancell" asp-route-id="@comment.Id">Cancell</a>
+                            <a class="btn btn-success text-white pointer-event" asp-area="Admin" asp-page-handler="Confirm" asp-route-id="@comment.Id">Confirm</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

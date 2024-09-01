@@ -19,8 +19,15 @@ using MasterBlogPersentaion;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\Areas\Admin\Pages\_ViewImports.cshtml"
+using MasterBlogPersentaion.Eums;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA256", @"47e02b4da20d198892b7b1b00b12944068797c438ef2e82d20ff70b4d56bad39", @"/Areas/Admin/Pages/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA256", @"3ce988abb16f42afdc06d590070159b00e0fd121927f8686ced243cb2fd89f25", @"/Areas/Admin/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA256", @"3810c58fca0f980bc3960d8204ae578898137920155717eb83bea1167636166d", @"/Areas/Admin/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     #nullable disable

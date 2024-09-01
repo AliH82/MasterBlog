@@ -21,6 +21,7 @@ namespace MB_Infrastructure.EFCore.Mapping
             builder.Property(x => x.Content).IsRequired();
 
             builder.HasOne(x => x.ArticleCategory).WithMany(x => x.Articles).HasForeignKey(x => x.ArticleCategoryId);
+            builder.HasMany(x => x.Comment).WithOne(x => x.Article).HasForeignKey(x => x.ArticleId);
         }
     }
 }

@@ -19,8 +19,15 @@ using MasterBlogPersentaion;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\Areas\Admin\Pages\_ViewImports.cshtml"
+using MasterBlogPersentaion.Eums;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA256", @"9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb1", @"/Areas/Admin/Pages/ArticleCategory/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA256", @"3ce988abb16f42afdc06d590070159b00e0fd121927f8686ced243cb2fd89f25", @"/Areas/Admin/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA256", @"3810c58fca0f980bc3960d8204ae578898137920155717eb83bea1167636166d", @"/Areas/Admin/Pages/_ViewImports.cshtml")]
     #nullable restore
     public class Areas_Admin_Pages_ArticleCategory_Index : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     #nullable disable
@@ -59,7 +66,7 @@ using MasterBlogPersentaion;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n<div class=\"card\">\r\n    <div class=\"card-header\">\r\n        <h3 class=\"float-left\">Article Category List</h3>\r\n        <div class=\"float-right\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb16481", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb16712", async() => {
                 WriteLiteral("Add New");
             }
             );
@@ -153,7 +160,7 @@ using MasterBlogPersentaion;
 #line hidden
 #nullable disable
             WriteLiteral("</td>\r\n                        <td>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb110928", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb111159", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -194,7 +201,7 @@ using MasterBlogPersentaion;
 #line hidden
 #nullable disable
             WriteLiteral("                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb113657", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb113888", async() => {
                 WriteLiteral("Activate");
             }
             );
@@ -238,7 +245,7 @@ using MasterBlogPersentaion;
 #line hidden
 #nullable disable
             WriteLiteral("                                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb116616", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9f3533c7489ca910f7b84a573ceaa6efd8565e8ff60b6b530889e6dfe9550fb116847", async() => {
                 WriteLiteral("Remove");
             }
             );

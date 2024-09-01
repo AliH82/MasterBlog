@@ -1,0 +1,71 @@
+﻿@page "{id:int}"
+@model MasterBlogPersentaion.Areas.Admin.Pages.Comment.DetailModel
+@{
+}
+
+
+<div class="card">
+    <div class="card-header">
+        <h2>Comment: @Model.model.Name</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">Id:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.Id</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">ArticleId:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.ArticleId</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">Created:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.CreatedOn</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">Article Name:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.Article</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">User Name:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.Name</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">User Email:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.Email</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">User Message:</span>
+                    <span class="text-secondary" style="font-size: 14px">@Model.model.Message</span>
+                </div>
+
+                <div class="mb-2">
+                    <span class="text-dark" style="font-size: 16px">Statuse Comment:</span>
+                    @if (Model.model.Statuse == StatuseComment.New)
+                    {
+                        <span class="text-warning" style="font-size: 14px">Pending</span>
+                        <i class="fa fa-spinner text-warning" style="font-size: 16px"></i>
+                    }
+                    @if (Model.model.Statuse == StatuseComment.Confirm)
+                    {
+                        <span class="text-success" style="font-size: 14px">Confirm</span>
+                        <i class="fa fa-check text-success"></i>
+                    }
+                    @if (Model.model.Statuse == StatuseComment.Cancell)
+                    {
+                        <span class="text-danger" style="font-size: 14px">Cancell</span>
+                        <i class="fa fa-close text-danger"></i>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

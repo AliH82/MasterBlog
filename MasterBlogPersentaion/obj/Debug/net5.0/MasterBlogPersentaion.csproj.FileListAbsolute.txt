@@ -82,3 +82,5 @@ G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\ob
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Article\Create.cshtml.g.cs
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Article\Edit.cshtml.g.cs
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Pages\ArticleDetails.cshtml.g.cs
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Comment\Index.cshtml.g.cs
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Comment\Detail.cshtml.g.cs
