@@ -1,19 +1,18 @@
-﻿using MB_Domain.ArticleCategoryAgg;
+﻿using _01_Framework.Domian;
+using MB_Domain.ArticleCategoryAgg;
 using MB_Domain.CommentAgg;
 using System;
 using System.Collections.Generic;
 
 namespace MB_Domain.ArticleAgg
 {
-    public class Article
+    public class Article : BaseDomian
     {
-        public int Id { get; private set; }
         public string Title { get; private set; }
         public string ShortDescription { get; private set; }
         public string Image { get; private set; }
         public string Content { get; private set; }
         public bool IsDeleted { get; private set; }
-        public DateTime CreatedOn { get; private set; }
         public int ArticleCategoryId { get; private set; }
         public ArticleCategory ArticleCategory { get; private set; }
         public List<Comment> Comment { get; private set; }
@@ -29,7 +28,6 @@ namespace MB_Domain.ArticleAgg
             Image = image;
             Content = content;
             ArticleCategoryId = articleCategoryId;
-            CreatedOn = DateTime.Now;
             IsDeleted = false;
             Comment = new List<Comment>();
         }

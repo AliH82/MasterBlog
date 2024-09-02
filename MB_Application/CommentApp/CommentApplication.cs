@@ -1,4 +1,5 @@
-﻿using MB_Application.Contracts.Article;
+﻿using _01_Framework.Infrastructure;
+using MB_Application.Contracts.Article;
 using MB_Application.Contracts.Comment;
 using MB_Domain.CommentAgg;
 using System;
@@ -13,32 +14,39 @@ namespace MB_Application.CommentApp
     {
         private readonly ICommentRepository _commentRepository;
         private readonly IArticleApplication _articleApplication;
+        private readonly IUnitOfWork _unitOfWork;
 
         public CommentApplication(ICommentRepository commentRepository,
-            IArticleApplication articleApplication)
+            IArticleApplication articleApplication,
+            IUnitOfWork unitOfWork)
         {
             _commentRepository = commentRepository;
             _articleApplication = articleApplication;
+            _unitOfWork = unitOfWork;
         }
 
         public void Cancell(int id)
         {
-            var comment = _commentRepository.Getby(id);
+            _unitOfWork.BeginTran();
+            var comment = _commentRepository.Get(id);
             comment.Cancell();
-            _commentRepository.Save();
+            _unitOfWork.CommitTran();
         }
 
         public void Confirm(int id)
         {
-            var comment = _commentRepository.Getby(id);
+            _unitOfWork.BeginTran();
+            var comment = _commentRepository.Get(id);
             comment.Confirm();
-            _commentRepository.Save();
+            _unitOfWork.CommitTran();
         }
 
         public void Create(CommentViewModel model)
         {
+            _unitOfWork.BeginTran();
             var comment = new Comment(model.Name, model.Email, model.Message, model.ArticleId);
             _commentRepository.Create(comment);
+            _unitOfWork.CommitTran();
         }
 
         public List<CommentViewModel> GetAll()
@@ -57,9 +65,9 @@ namespace MB_Application.CommentApp
             }).OrderByDescending(c => c.Id).ToList();
         }
 
-        public CommentViewModel GetBy(int id)
+        public CommentViewModel Get(int id)
         {
-            var comment = _commentRepository.Getby(id);
+            var comment = _commentRepository.Get(id);
             var viewComment = new CommentViewModel
             {
                 Id = comment.Id,

@@ -10,7 +10,7 @@ namespace MB_Application.Contracts.Comment
     {
         void Create(CommentViewModel model);
         List<CommentViewModel> GetAll();
-        CommentViewModel GetBy(int id);
+        CommentViewModel Get(int id);
         void Cancell(int id);
         void Confirm(int id);
     }

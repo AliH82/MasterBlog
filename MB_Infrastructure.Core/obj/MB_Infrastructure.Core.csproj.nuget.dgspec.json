@@ -4,6 +4,67 @@
     "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\MB_Infrastructure.Core\\MB_Infrastructure.Core.csproj": {}
   },
   "projects": {
+    "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\01_Framework\\01_Framework.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\01_Framework\\01_Framework.csproj",
+        "projectName": "01_Framework",
+        "projectPath": "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\01_Framework\\01_Framework.csproj",
+        "packagesPath": "C:\\Users\\Ali\\.nuget\\packages\\",
+        "outputPath": "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\01_Framework\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Ali\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\MB_Application.Contracts\\MB_Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -144,7 +205,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\01_Framework\\01_Framework.csproj": {
+                "projectPath": "G:\\programming learn\\Back End\\ASP.NET MVC\\MasterBlogger\\01_Framework\\01_Framework.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

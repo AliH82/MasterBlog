@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _01_Framework.Infrastructure;
 
 namespace MB_Domain.ArticleCategoryAgg
 {
-    public interface IArticleCategoryRepository
+    public interface IArticleCategoryRepository : IRepository<int, ArticleCategory>
     {
-        List<ArticleCategory> GetAll();
-        void Create(ArticleCategory entity);
-        ArticleCategory Get(int id);
-        void Edit(ArticleCategory entity);
-        bool Exist(string title); 
-        void Save();
+        
     }
 }

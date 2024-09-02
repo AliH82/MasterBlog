@@ -84,3 +84,5 @@ G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\ob
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Pages\ArticleDetails.cshtml.g.cs
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Comment\Index.cshtml.g.cs
 G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\obj\Debug\net5.0\Razor\Areas\Admin\Pages\Comment\Detail.cshtml.g.cs
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\bin\Debug\net5.0\01_Framework.dll
+G:\programming learn\Back End\ASP.NET MVC\MasterBlogger\MasterBlogPersentaion\bin\Debug\net5.0\01_Framework.pdb

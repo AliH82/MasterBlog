@@ -1,4 +1,5 @@
-﻿using MB_Domain.ArticleAgg;
+﻿using _01_Framework.Domian;
+using MB_Domain.ArticleAgg;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,15 +8,13 @@ using System.Threading.Tasks;
 
 namespace MB_Domain.CommentAgg
 {
-    public class Comment
+    public class Comment : BaseDomian
     {
-        public int Id { get; private set; }
         public int ArticleId { get; private set; }
         public string Name { get; private set; }
         public string Email { get; private set; }
         public string Message { get; private set; }
         public int Statuse { get; private set; }
-        public DateTime CreatedOn { get;private set; }
         public Article Article { get; private set; }
 
         protected Comment()
@@ -30,7 +29,6 @@ namespace MB_Domain.CommentAgg
             Message = message;
             Statuse = Statuses.New;
             ArticleId = articleId;
-            CreatedOn = DateTime.Now;
         }
 
         public void Cancell()

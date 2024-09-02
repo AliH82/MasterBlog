@@ -16,7 +16,7 @@ namespace MasterBlogPersentaion.Areas.Admin.Pages.Comment
 
         public void OnGet(int id)
         {
-            model = _commentApplication.GetBy(id);
+            model = _commentApplication.Get(id);
         }
     }
 }
